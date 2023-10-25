@@ -22,3 +22,10 @@ class User(BaseModel):
     middle_name: Optional[str] = None # Assigned a default value of None
     gender: Gender
     roles: List[Role]
+
+# For PUT Requests
+class UserUpdate(BaseModel):
+    first_name: Optional[str]
+    last_name: Optional[str]
+    middle_name: Optional[str]
+    roles: Optional[List[Role]]
